@@ -1,0 +1,15 @@
+import random
+y=random.randint(1,100)
+
+try:
+    x= int(input("bienvenue au jeu deviner le numéro!Je pense à un numéro entre 1 et 100 pouvez-vous deviner lequel c'est?"))
+    while x!=y:
+        if x<y:
+            print("votre estimation est trop basse")
+            x=int(input())
+        elif x>y:
+            print("votre estimation est trop haute")
+            x=int(input())
+    print("Félicitation! Vous avez deviné le numéro correctement")
+except ValueError:
+    print("Please enter a valid int")
